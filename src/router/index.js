@@ -22,6 +22,15 @@ Vue.use(VueRouter)
     path: '/example',
     name: 'Example',
     component: () => import(/* webpackChunkName: "example" */ '../views/Example.vue')
+  },
+  {
+    path: '/404',
+    name: 'Error404',
+    component: () => import(/* webpackChunkName: "error404" */ '../views/Error404.vue')
+  },
+  {
+    path: '*',
+    redirect: '/404'
   }
 ]
 

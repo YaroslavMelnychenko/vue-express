@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "dev": "vue-cli-service build --mode development --dest dist/public --target app --watch",
+    "build": "vue-cli-service build --mode production --dest dist/public --target app",
     "lint": "vue-cli-service lint",
     "start": "node dist/bin/www"
   },
