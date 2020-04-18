@@ -19,9 +19,9 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/example',
-    name: 'Example',
-    component: () => import(/* webpackChunkName: "example" */ '../views/Example.vue')
+    path: '/users',
+    name: 'Users',
+    component: () => import(/* webpackChunkName: "users" */ '../views/Users.vue')
   },
   {
     path: '/404',

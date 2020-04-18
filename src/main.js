@@ -4,7 +4,9 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-new Vue({
+var Root = new Vue({
   router,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
+
+window.App = Root.$children[0];
