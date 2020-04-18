@@ -22,11 +22,13 @@ router.route('/')
 })
 .post((req, res, next) => {
 	User.create({
+		firstName: req.body.firstName,
+		lastName: req.body.lastName,
 		username: req.body.username,
 		password: bcrypt.hashSync(req.body.password, 10)
 	}).then(user => {
 		res.statusCode = 200;
-		res.json({ status: 'ok' });
+		res.json(user);
 	}).catch(err => next(err));
 });
 
