@@ -11,6 +11,11 @@ router.all((req, res, next) => {
 
 router.route('/')
 .get((req, res, next) => {
+	var err = new Error('GET method not allowed');
+	err.status = 405;
+	next(err);
+})
+.post((req, res, next) => {
 	res.statusCode = 200;
 	res.json({ success: true });
 });

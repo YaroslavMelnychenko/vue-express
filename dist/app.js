@@ -21,4 +21,13 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.use(function(err, req, res, next) {
+    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = err.status || 500;
+    res.json({ error: {
+        status: err.status,
+        message: err.message
+    }});
+});
+
 module.exports = app;

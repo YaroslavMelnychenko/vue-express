@@ -19,7 +19,7 @@ export default {
 	},
 	mounted() {
 		var instance = this;
-		axios.get('/api/users').then((response) => {
+		axios.post('/api/users').then((response) => {
 			instance.user = response.data;
 		});
 	}
