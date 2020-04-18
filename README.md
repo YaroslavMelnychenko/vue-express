@@ -1,8 +1,13 @@
-# chat
+# Vue + Express.js + Sequelize
 
 ## Project setup
 ```
 npm install
+```
+
+### Copy .env.example to .env
+```
+cp .env.example .env
 ```
 
 ### Start express server
